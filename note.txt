@@ -60,3 +60,16 @@ function App() {
 }
 
 ---------------------------
+
+# Fetching Data with React Router "Loaders"
+
+# Render as you fetch strategy
+
+use loaders
+
+# Fetch on render approach
+
+use 'useEffect'
+data loading waterfalls
+
+---------------------------
