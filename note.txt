@@ -130,3 +130,39 @@ export async function action({ request }) {
 },
 
 ---------------------------
+
+# Setting up Tailwind CSS
+
+go to tailwind css website for the instructions
+
+# Steps
+
+1. npm install -D tailwindcss postcss autoprefixer
+2. npx tailwindcss init -p
+3. copy the content to tailwind.config.js
+
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
+4. Paste this to index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+5. Install Tailwind CSS IntelliSense (one time only)
+- Search Tailwind CSS IntelliSense in the Extensions
+
+6. Install Tailwind CSS Prettier 
+https://github.com/tailwindlabs/prettier-plugin-tailwindcss
+npm install -D prettier prettier-plugin-tailwindcss
+
+7. Create 'prettier.config.cjs' file then paste this      (.cjs) 
+
+module.exports = {
+  plugins: ['prettier-plugin-tailwindcss'],
+}
+
+---------------------------
