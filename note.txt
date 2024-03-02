@@ -21,3 +21,42 @@ import eslint from "vite-plugin-eslint"
 export default defineConfig({
   plugins: [react(), eslint],
 });
+
+---------------------------
+
+# Install React Rotuer
+
+npm i react-router-dom
+
+# New way of implementing React Router
+
+If you want to use powerful APIs like data loaders, data actions, data fetchers use this syntax (old way in WorldWise App)
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/menu",
+    element: <Menu />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+  {
+    path: "/order/new",
+    element: <CreateOrder />,
+  },
+  {
+    path: "/order/:orderId",
+    element: <Order />,
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+
+---------------------------
