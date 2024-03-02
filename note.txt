@@ -73,3 +73,12 @@ use 'useEffect'
 data loading waterfalls
 
 ---------------------------
+
+# Check the status of the Page  // idle, loading 
+
+import { useNavigation } from "react-router-dom";
+
+const navigation = useNavigation();
+const isLoading = navigation.state === "loading";
+
+---------------------------
