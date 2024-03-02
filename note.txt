@@ -82,3 +82,21 @@ const navigation = useNavigation();
 const isLoading = navigation.state === "loading";
 
 ---------------------------
+
+# Handling Errors with Error Elements
+
+import { useRouteError } from "react-router-dom";
+
+{
+    path: "/menu",
+    element: <Menu />,
+    loader: menuLoader,
+    errorElement: <Error />,                --- Error Element
+},
+
+
+const error = useRouteError();
+<p>{error.data || error.message}</p>
+
+---------------------------
+
