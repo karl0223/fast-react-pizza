@@ -166,3 +166,9 @@ module.exports = {
 }
 
 ---------------------------
+
+# Install Redux Toolkit
+
+npm i @reduxjs/toolkit react-redux
+
+---------------------------
