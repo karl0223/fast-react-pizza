@@ -228,3 +228,23 @@ useEffect(() => {
 
 ---------------------------
 
+# Updating Data without Navigation
+
+fetcher.Form ---- used to create data without navigation
+
+# Create the action
+
+export async function action({ request, params }) {
+  const data = { priority: true };
+  await upadateOrder(params.orderId, data);
+
+  return null;
+}
+
+
+# Add the action in the Router
+
+action: updateOrderAction,
+
+
+---------------------------
