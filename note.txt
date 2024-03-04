@@ -208,3 +208,23 @@ const userSlice = createSlice({
 
 
 ---------------------------
+
+# Fetching Data without Navigation: useFetcher
+
+--- most used when using React router and data loading to have a very interactive application
+--- used to fetch data from different pages without navigation
+
+useFetcher()
+
+
+const fetcher = useFetcher();
+
+
+// Get the data on mount
+
+useEffect(() => {
+  if (!fetcher.data && fetcher.state === "idle") fetcher.load("/menu");     --- save the data in fetcher
+}, [fetcher]);
+
+---------------------------
+
